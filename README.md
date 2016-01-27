@@ -1,3 +1,9 @@
 # CPSC 411 Vim Plugin
 
-- Additional keyword highlighting for the `ir` language EBNF.
+Includes:
+
+- Syntax highlighting for the CPSC 411 Intermediate Representation language EBNF.
+
+## Installation
+
+Use a plugin manager like Pathogen, Vundle, NeoBundle, etc.
