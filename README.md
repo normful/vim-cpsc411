@@ -1,8 +1,10 @@
 # CPSC 411 Vim Plugin
 
+Vim plugin for the languages used in the UBC CPSC 411 course.
+
 Includes:
 
-- Syntax highlighting for the CPSC 411 Intermediate Representation language EBNF.
+- Syntax highlighting for the EBNF of the IR compiler language.
 
 ## Installation
 
