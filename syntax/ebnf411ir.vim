@@ -22,17 +22,17 @@ else
   command! -nargs=+ HiLink hi def link <args>
 endif
 
-syn keyword ebnf411irNonTerminal          Exp Stm Data
-syn keyword ebnf411irNonTerminalContained Exp Stm Data contained
-syn match   ebnf411irNonTerminalContained "\(Exp\|Stm\|Data\),*" contained
-syn keyword ebnf411irTerminal             BINOP CALL CJUMP CMOVE CONST DATA ESEQ EXP JUMP LABEL MEM MOVE NAME SEQ TEMP 
+syn keyword ebnf411irNonTerminal    Exp Stm Data
+syn keyword ebnf411irNonTerminal    Exp Stm Data           contained
+syn match   ebnf411irNonTerminal    "\(Exp\|Stm\|Data\),*" contained
+syn keyword ebnf411irTerminal       BINOP CALL CJUMP CMOVE CONST DATA ESEQ EXP JUMP LABEL MEM MOVE NAME SEQ TEMP 
 
-syn keyword ebnf411irConstant             int                 contained
-syn match   ebnf411irIdentifier           "\(Label\|Temp\),*" contained
-syn match   ebnf411irOperator             "\(Op\|RelOp\),*"   contained
+syn keyword ebnf411irConstant       int                    contained
+syn match   ebnf411irIdentifier     "\(Label\|Temp\),*"    contained
+syn match   ebnf411irOperator       "\(Op\|RelOp\),*"      contained
 
-syn region  ebnf411irProductionArgs start="("   end=")" contains=ebnf411irNonTerminalContained,ebnf411irIdentifier,ebnf411irOperator,ebnf411irConstant
-syn region  ebnf411irComment        start="(\*" keepend end="\*)"
+syn region  ebnf411irProductionArgs start="("   end=")"    contains=ebnf411irNonTerminal,ebnf411irIdentifier,ebnf411irOperator,ebnf411irConstant
+syn region  ebnf411irComment        start="(\*" end="\*)"  keepend
 
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
@@ -45,7 +45,6 @@ if version >= 508 || !exists("did_ebnf_syn_inits")
     command! -nargs=+ HiLink hi def link <args>
   endif
   HiLink ebnf411irNonTerminal          Function
-  HiLink ebnf411irNonTerminalContained Function
   HiLink ebnf411irTerminal             Typedef
   HiLink ebnf411irConstant             Constant
   HiLink ebnf411irIdentifier           Identifier
