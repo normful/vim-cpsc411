@@ -11,11 +11,11 @@ if !exists("main_syntax")
   elseif exists("b:current_syntax")
     finish
   endif
-  " we define it here so that included files can test for it
+  " We define it here so that included files can test for it
   let main_syntax='ebnf411ir'
 endif
 
-" don't use standard HiLink, it will not work with included syntax files
+" Don't use standard HiLink, it will not work with included syntax files
 if version < 508
   command! -nargs=+ HiLink hi link <args>
 else
