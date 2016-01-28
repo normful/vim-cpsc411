@@ -34,6 +34,8 @@ syn match   ebnf411irOperator       "\(Op\|RelOp\),*"      contained
 syn region  ebnf411irProductionArgs start="("   end=")"    contains=ebnf411irNonTerminal,ebnf411irIdentifier,ebnf411irOperator,ebnf411irConstant
 syn region  ebnf411irComment        start="(\*" end="\*)"  keepend
 
+syn keyword ebnf411irJavaClass      IRStm Frame Access 
+
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
 " For version 5.8 and later: only when an item doesn't have highlighting yet
@@ -50,6 +52,7 @@ if version >= 508 || !exists("did_ebnf_syn_inits")
   HiLink ebnf411irIdentifier           Identifier
   HiLink ebnf411irOperator             Operator
   HiLink ebnf411irComment              Comment
+  HiLink ebnf411irJavaClass            Special
   delcommand HiLink
 endif
 
